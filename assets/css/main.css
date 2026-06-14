@@ -2384,3 +2384,27 @@ button,
 	object-fit: cover;
 	border-radius: 8px;
 }
+/* Make paragraph/content text darker and easier to read */
+body, p, li {
+	color: #333333 !important;
+	font-weight: 400;
+}
+
+/* Slightly stronger project descriptions */
+.posts article p {
+	color: #2f2f2f !important;
+	font-weight: 400;
+	line-height: 1.7;
+}
+
+/* Stronger sidebar text */
+#sidebar p,
+#sidebar li {
+	color: #333333 !important;
+}
+
+/* Optional: make important small text/tags clearer */
+.tags span {
+	color: #333333;
+	font-weight: 500;
+}
