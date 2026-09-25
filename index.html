@@ -608,10 +608,10 @@
 							</article>
 
 
-							<!-- E-Commerce -->
+							<!-- E-Commerce Customer Analytics -->
 							<article>
 
-								<a href="#" class="image">
+								<a href="images/pic02.png" class="image">
 
 									<img
 										src="images/pic02.png"
@@ -621,31 +621,72 @@
 
 								</a>
 
+								<p style="font-size:0.95em; margin-top:-0.5em;">
+									<strong>Analysis Overview:</strong>
+									This project combines six relational Olist e-commerce datasets
+									to examine revenue performance, customer purchasing behavior,
+									delivery efficiency, review scores, and regional freight costs.
+								</p>
+
+								<p style="font-size:0.95em;">
+									<strong>What to notice:</strong>
+									Longer delivery times were associated with lower customer review
+									scores, while repeat purchasing remained limited and some states
+									showed substantially higher freight-cost ratios.
+								</p>
+
 								<h3>
-									E-Commerce Customer Analytics ETL
+									E-Commerce Customer Analytics & ETL
 								</h3>
 
 								<p>
 									Built an end-to-end ETL and analytics workflow using the Olist
-									e-commerce dataset to analyze customer behavior, delivery performance,
-									logistics efficiency, and customer satisfaction.
+									Brazilian E-Commerce dataset. Six relational tables covering orders,
+									customers, products, payments, order items, and reviews were merged,
+									cleaned, validated, and transformed into an analysis-ready dataset.
+									The final analysis covered <strong>98,666 orders</strong>,
+									<strong>95,420 customers</strong>, and approximately
+									<strong>$15.84M in revenue</strong>.
 								</p>
+
+								<h4>Key Results</h4>
+
+								<ul>
+
+									<li>
+										<strong>Health & Beauty</strong> and
+										<strong>Watches & Gifts</strong> were among the
+										highest revenue-generating product categories.
+									</li>
+
+									<li>
+										Longer delivery times showed a
+										<strong>negative relationship with customer review scores</strong>,
+										making delivery performance an important area for operational review.
+									</li>
+
+									<li>
+										The analysis showed that the majority of customers were
+										<strong>one-time buyers</strong>, highlighting limited repeat
+										purchasing within the dataset.
+									</li>
+
+									<li>
+										Several states showed
+										<strong>higher freight-to-product-price ratios</strong>,
+										highlighting regional differences in logistics costs.
+									</li>
+
+								</ul>
 
 								<p>
-									<strong>Scale:</strong> 6 relational tables | 98,666 orders |
-									approximately $15.84M in revenue
+									The ETL workflow included multi-table joins, missing-value handling,
+									category standardization, date processing, and feature engineering for
+									delivery time, freight ratios, and repeat-customer behavior. The cleaned
+									dataset was then used to translate operational and customer patterns
+									into business-focused findings around logistics, customer experience,
+									revenue performance, and retention.
 								</p>
-
-								<p>
-									<strong>Key Insight:</strong> Longer delivery times were associated
-									with lower customer review scores, while several states showed
-									disproportionately high freight costs.
-								</p>
-
-								<p>
-									<strong>Tools:</strong> Python, SQL, Pandas, NumPy, Power BI
-								</p>
-
 
 								<ul class="actions">
 
@@ -684,7 +725,11 @@
 									and loads cleaned data into PostgreSQL using idempotent upserts.
 									The pipeline preserves raw JSON snapshots, applies data-quality checks,
 									and supports repeatable execution through Docker Compose.
-								</p>
+								</p><article>
+
+								<a href="#" class="image">
+
+							
 
 								<p>
 									<strong>Pipeline Snapshot:</strong> Paginated REST API extraction →
