@@ -662,7 +662,55 @@
 
 							</article>
 
+							<article>
 
+								<a href="#" class="image">
+
+									<img
+										src="images/etl-pipeline-architecture.png"
+										alt="E-commerce API to PostgreSQL ETL Pipeline"
+										style="height:300px; object-fit:contain; background:#0d1117;"
+									/>
+
+								</a>
+
+								<h3>
+									Production-Style ETL Pipeline
+								</h3>
+
+								<p>
+									Built a production-style ETL pipeline that extracts product data from the
+									DummyJSON Products API, validates and transforms nested JSON records,
+									and loads cleaned data into PostgreSQL using idempotent upserts.
+									The pipeline preserves raw JSON snapshots, applies data-quality checks,
+									and supports repeatable execution through Docker Compose.
+								</p>
+
+								<p>
+									<strong>Pipeline Snapshot:</strong> Paginated REST API extraction →
+									timestamped raw JSON storage → schema validation and flattening →
+									PostgreSQL load with <code>ON CONFLICT</code> upserts.
+								</p>
+
+								<p>
+									<strong>Tools:</strong> Python, Pandas, REST API, PostgreSQL, Docker,
+									Docker Compose, Pytest, GitHub Actions
+								</p>
+
+								<ul class="actions">
+
+									<li>
+										<a
+											href="https://github.com/AnnBMariyam/ecommerce-pipeline-foundations"
+											class="button"
+										>
+											View Project
+										</a>
+									</li>
+
+								</ul>
+
+							</article>
 							<!-- COVID Forecasting -->
 							<article>
 
@@ -846,7 +894,7 @@
 								<a href="#" class="image">
 
 									<img
-										src="images/pic06.png"
+										src="images/hospital dashboard.png"
 										alt="Power BI Dashboards"
 										style="height:270px; object-fit:cover;"
 									/>
