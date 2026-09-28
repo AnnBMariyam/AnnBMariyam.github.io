@@ -608,6 +608,104 @@
 							</article>
 
 
+
+							<!-- Production-Style ETL Pipeline -->
+							<article>
+
+								<a href="images/etl-pipeline-architecture.png" class="image">
+
+									<img
+										src="images/etl-pipeline-architecture.png"
+										alt="E-commerce API to PostgreSQL ETL Pipeline"
+										style="height:300px; object-fit:contain; background:#0d1117;"
+									/>
+
+								</a>
+
+								<p style="font-size:0.95em; margin-top:-0.5em;">
+									<strong>Pipeline Overview:</strong>
+									This project demonstrates a production-style ETL workflow that
+									extracts paginated product data from a REST API, preserves the raw
+									response, validates and transforms nested JSON, and loads the
+									result into PostgreSQL.
+								</p>
+
+								<p style="font-size:0.95em;">
+									<strong>What to notice:</strong>
+									The pipeline is designed for repeatable execution with idempotent
+									PostgreSQL upserts, structured logging, automated validation,
+									Docker Compose orchestration, and GitHub Actions testing.
+								</p>
+
+								<h3>
+									Production-Style API to PostgreSQL ETL Pipeline
+								</h3>
+
+								<p>
+									Built a modular Python ETL pipeline using the
+									<strong>DummyJSON Products REST API</strong>. Product records are
+									extracted through offset pagination, saved as timestamped raw JSON,
+									flattened and validated with Pandas, and loaded into PostgreSQL
+									using <code>ON CONFLICT</code> upserts so the pipeline can be
+									rerun without creating duplicate product IDs.
+								</p>
+
+								<h4>Key Implementation Highlights</h4>
+
+								<ul>
+
+									<li>
+										Implemented <strong>paginated REST API extraction</strong>
+										using <code>limit</code> and <code>skip</code>, with API
+										response validation and raw-data preservation.
+									</li>
+
+									<li>
+										Flattened nested product structures and standardized data
+										types while applying validation rules and custom error handling.
+									</li>
+
+									<li>
+										Used PostgreSQL <strong>idempotent upserts</strong> to insert
+										new products and update existing records without duplicating
+										source product IDs.
+									</li>
+
+									<li>
+										Added <strong>15 automated pytest cases</strong> covering
+										transformation and configuration logic, with GitHub Actions
+										running the test suite automatically on every push.
+									</li>
+
+								</ul>
+
+								<p>
+									The project also includes structured terminal and file logging,
+									environment-based configuration, Docker containerization,
+									PostgreSQL health checks, persistent database storage, and
+									Docker Compose orchestration. Together, these features move the
+									project beyond a notebook-style ETL exercise toward a more
+									repeatable and maintainable data pipeline workflow.
+								</p>
+
+								<ul class="actions">
+
+									<li>
+										<a
+											href="https://github.com/AnnBMariyam/ecommerce-pipeline-foundations"
+											class="button"
+										>
+											View Project
+										</a>
+									</li>
+
+								</ul>
+
+							</article>
+
+
+
+
 							<!-- E-Commerce Customer Analytics -->
 							<article>
 
@@ -703,50 +801,54 @@
 
 							</article>
 
+
+							<!-- Power BI -->
 							<article>
 
 								<a href="#" class="image">
 
 									<img
-										src="images/etl-pipeline-architecture.png"
-										alt="E-commerce API to PostgreSQL ETL Pipeline"
-										style="height:300px; object-fit:contain; background:#0d1117;"
+										src="images/hospital dashboard.png"
+										alt="Power BI Dashboards"
+										style="height:270px; object-fit:cover;"
 									/>
 
 								</a>
 
 								<h3>
-									Production-Style ETL Pipeline
+									Power BI Dashboard Projects
 								</h3>
 
 								<p>
-									Built a production-style ETL pipeline that extracts product data from the
-									DummyJSON Products API, validates and transforms nested JSON records,
-									and loads cleaned data into PostgreSQL using idempotent upserts.
-									The pipeline preserves raw JSON snapshots, applies data-quality checks,
-									and supports repeatable execution through Docker Compose.
-								</p><article>
+									To support better visibility into hospital operations,
+									this project involved building an interactive Power BI
+									dashboard focused on patient volume, appointment efficiency,
+									revenue patterns, and operational performance. The dashboard
+									was designed to help hospital administrators monitor key
+									healthcare metrics, identify high-load departments, understand
+									financial trends, and evaluate appointment outcomes.
 
-								<a href="#" class="image">
-
-							
-
-								<p>
-									<strong>Pipeline Snapshot:</strong> Paginated REST API extraction →
-									timestamped raw JSON storage → schema validation and flattening →
-									PostgreSQL load with <code>ON CONFLICT</code> upserts.
+									Using hospital-related datasets including patients, doctors,
+									departments, appointments, billing, and medical records,
+									the project transformed operational data into a clear business
+									intelligence solution. Key metrics included total patients,
+									total appointments, total revenue, cancellation rate, and
+									average treatment cost. Visual insights were created to show
+									appointment distribution by department, revenue by payment
+									method, appointment status, and disease distribution.
+									Developed using Power BI Desktop and DAX functions such as
+									CALCULATE, SUM, SUMX, DIVIDE, and DISTINCTCOUNT, this dashboard
+									demonstrates how healthcare data can be converted into actionable
+									insights for administrative planning, workload monitoring,
+									and performance improvement.
 								</p>
 
-								<p>
-									<strong>Tools:</strong> Python, Pandas, REST API, PostgreSQL, Docker,
-									Docker Compose, Pytest, GitHub Actions
-								</p>
 
 								<ul class="actions">
 
 									<li>
 										<a
-											href="https://github.com/AnnBMariyam/ecommerce-pipeline-foundations"
+											href="https://github.com/AnnBMariyam/Power-BI-dashboard-projects"
 											class="button"
 										>
 											View Project
@@ -756,6 +858,7 @@
 								</ul>
 
 							</article>
+
 							<!-- COVID Forecasting -->
 							<article>
 
@@ -933,62 +1036,6 @@
 							</article>
 
 
-							<!-- Power BI -->
-							<article>
-
-								<a href="#" class="image">
-
-									<img
-										src="images/hospital dashboard.png"
-										alt="Power BI Dashboards"
-										style="height:270px; object-fit:cover;"
-									/>
-
-								</a>
-
-								<h3>
-									Power BI Dashboard Projects
-								</h3>
-
-								<p>
-									To support better visibility into hospital operations,
-									this project involved building an interactive Power BI
-									dashboard focused on patient volume, appointment efficiency,
-									revenue patterns, and operational performance. The dashboard
-									was designed to help hospital administrators monitor key
-									healthcare metrics, identify high-load departments, understand
-									financial trends, and evaluate appointment outcomes.
-
-									Using hospital-related datasets including patients, doctors,
-									departments, appointments, billing, and medical records,
-									the project transformed operational data into a clear business
-									intelligence solution. Key metrics included total patients,
-									total appointments, total revenue, cancellation rate, and
-									average treatment cost. Visual insights were created to show
-									appointment distribution by department, revenue by payment
-									method, appointment status, and disease distribution.
-									Developed using Power BI Desktop and DAX functions such as
-									CALCULATE, SUM, SUMX, DIVIDE, and DISTINCTCOUNT, this dashboard
-									demonstrates how healthcare data can be converted into actionable
-									insights for administrative planning, workload monitoring,
-									and performance improvement.
-								</p>
-
-
-								<ul class="actions">
-
-									<li>
-										<a
-											href="https://github.com/AnnBMariyam/Power-BI-dashboard-projects"
-											class="button"
-										>
-											View Project
-										</a>
-									</li>
-
-								</ul>
-
-							</article>
 
 						</div>
 
