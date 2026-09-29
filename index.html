@@ -124,557 +124,550 @@
 
                         <div class="posts">
 
-					<!-- Sales Revenue -->
-					<article>
 
-						<a href="images/pic12.png" class="image">
-							<img
-								src="images/pic12.png"
-								alt="Sales Revenue Analytics Power BI Dashboard"
-								style="height:300px; object-fit:cover;"
-							/>
-						</a>
+                            <!-- =========================================================
+								1. SALES REVENUE
+							========================================================= -->
+							<article>
 
-						<p style="
-							color:#f56a6a;
-							font-weight:700;
-							text-transform:uppercase;
-							letter-spacing:0.08em;
-							margin-bottom:0.5em;
-						">
-							Business Intelligence
-						</p>
-
-						<h3>
-							Sales Revenue & Profitability Analysis
-						</h3>
-
-						<p>
-							Analyzed 9,994 retail transactions to identify revenue drivers,
-							profitability gaps, product-level losses, and discount patterns
-							using Python, SQL, Tableau, and Power BI.
-						</p>
-
-						<div style="
-							display:grid;
-							grid-template-columns:repeat(2, 1fr);
-							gap:0.75em;
-							margin:1.5em 0;
-						">
-
-							<div style="
-								padding:1em;
-								background:#f5f6f7;
-								border-radius:8px;
-							">
-								<strong style="font-size:1.35em;">
-									9,994
-								</strong>
-								<br>
-								<span style="font-size:0.85em;">
-									transactions analyzed
-								</span>
-							</div>
-
-							<div style="
-								padding:1em;
-								background:#f5f6f7;
-								border-radius:8px;
-							">
-								<strong style="font-size:1.35em;">
-									~$2.3M
-								</strong>
-								<br>
-								<span style="font-size:0.85em;">
-									sales analyzed
-								</span>
-							</div>
-
-						</div>
-
-						<p>
-							<strong>Key finding:</strong>
-							Technology generated approximately $145K in profit,
-							while Tables produced about $17.7K in losses.
-							Transactions discounted above 30% also showed weaker
-							profitability patterns.
-						</p>
-
-						<p style="font-size:0.9em;">
-							<strong>Tools:</strong>
-							Python · SQL · Power BI · Tableau · Pandas
-						</p>
-
-						<ul class="actions">
-
-							<li>
-								<a
-									href="https://github.com/AnnBMariyam/Sales-Revenue-Analytics"
-									class="button"
-								>
-									Explore Project
+								<a href="images/pic12.png" class="image">
+									<img
+										src="images/pic12.png"
+										alt="Sales Revenue Analytics Power BI Dashboard"
+										style="height:260px; object-fit:contain; background:#f5f6f7;"
+									/>
 								</a>
-							</li>
 
-						</ul>
-
-					</article>
-
-
-                            <!-- Production-Style ETL Pipeline -->
-                            <article>
-
-                                <a
-                                    href="images/etl-pipeline-architecture.png"
-                                    class="image"
-                                >
-
-                                    <img
-                                        src="images/etl-pipeline-architecture.png"
-                                        alt="E-commerce API to PostgreSQL ETL Pipeline"
-                                        style="height:300px; object-fit:contain; background:#0d1117;"
-                                    />
-
-                                </a>
-
-                                <p style="font-size:0.95em; margin-top:-0.5em;">
-
-                                    <strong>Pipeline Overview:</strong>
-
-                                    This project demonstrates a production-style ETL workflow that
-                                    extracts paginated product data from a REST API, preserves the raw
-                                    response, validates and transforms nested JSON, and loads the
-                                    result into PostgreSQL.
-
-                                </p>
-
-                                <p style="font-size:0.95em;">
-
-                                    <strong>What to notice:</strong>
-
-                                    The pipeline is designed for repeatable execution with idempotent
-                                    PostgreSQL upserts, structured logging, automated validation,
-                                    Docker Compose orchestration, and GitHub Actions testing.
-
-                                </p>
-
-                                <h3>
-                                    Production-Style API to PostgreSQL ETL Pipeline
-                                </h3>
-
-                                <p>
-                                    Built a modular Python ETL pipeline using the
-                                    <strong>DummyJSON Products REST API</strong>. Product records are
-                                    extracted through offset pagination, saved as timestamped raw JSON,
-                                    flattened and validated with Pandas, and loaded into PostgreSQL
-                                    using <code>ON CONFLICT</code> upserts so the pipeline can be
-                                    rerun without creating duplicate product IDs.
-                                </p>
-
-                                <h4>Key Implementation Highlights</h4>
-
-                                <ul>
-
-                                    <li>
-                                        Implemented
-                                        <strong>paginated REST API extraction</strong>
-                                        using <code>limit</code> and <code>skip</code>,
-                                        with API response validation and raw-data preservation.
-                                    </li>
-
-                                    <li>
-                                        Flattened nested product structures and standardized
-                                        data types while applying validation rules and custom
-                                        error handling.
-                                    </li>
-
-                                    <li>
-                                        Used PostgreSQL
-                                        <strong>idempotent upserts</strong>
-                                        to insert new products and update existing records
-                                        without duplicating source product IDs.
-                                    </li>
-
-                                    <li>
-                                        Added <strong>15 automated pytest cases</strong>
-                                        covering transformation and configuration logic,
-                                        with GitHub Actions running the test suite
-                                        automatically on every push.
-                                    </li>
-
-                                </ul>
-
-                                <p>
-                                    The project also includes structured terminal and file logging,
-                                    environment-based configuration, Docker containerization,
-                                    PostgreSQL health checks, persistent database storage, and
-                                    Docker Compose orchestration. Together, these features move the
-                                    project beyond a notebook-style ETL exercise toward a more
-                                    repeatable and maintainable data pipeline workflow.
-                                </p>
-
-                                <ul class="actions">
-
-                                    <li>
-
-                                        <a
-                                            href="https://github.com/AnnBMariyam/ecommerce-pipeline-foundations"
-                                            class="button"
-                                        >
-                                            View Project
-                                        </a>
-
-                                    </li>
-
-                                </ul>
-
-                            </article>
-
-
-                            <!-- E-Commerce Customer Analytics -->
-                            <article>
-
-                                <a href="images/pic02.png" class="image">
-
-                                    <img
-                                        src="images/pic02.png"
-                                        alt="E-Commerce Customer Analytics"
-                                        style="height:300px; object-fit:cover;"
-                                    />
-
-                                </a>
-
-                                <p style="font-size:0.95em; margin-top:-0.5em;">
-
-                                    <strong>Analysis Overview:</strong>
-
-                                    This project combines six relational Olist e-commerce datasets
-                                    to examine revenue performance, customer purchasing behavior,
-                                    delivery efficiency, review scores, and regional freight costs.
-
-                                </p>
-
-                                <p style="font-size:0.95em;">
-
-                                    <strong>What to notice:</strong>
-
-                                    Longer delivery times were associated with lower customer review
-                                    scores, while repeat purchasing remained limited and some states
-                                    showed substantially higher freight-cost ratios.
-
-                                </p>
-
-                                <h3>
-                                    E-Commerce Customer Analytics & ETL
-                                </h3>
-
-                                <p>
-                                    Built an end-to-end ETL and analytics workflow using the Olist
-                                    Brazilian E-Commerce dataset. Six relational tables covering orders,
-                                    customers, products, payments, order items, and reviews were merged,
-                                    cleaned, validated, and transformed into an analysis-ready dataset.
-                                    The final analysis covered <strong>98,666 orders</strong>,
-                                    <strong>95,420 customers</strong>, and approximately
-                                    <strong>$15.84M in revenue</strong>.
-                                </p>
-
-                                <h4>Key Results</h4>
-
-                                <ul>
-
-                                    <li>
-                                        <strong>Health & Beauty</strong> and
-                                        <strong>Watches & Gifts</strong> were among the
-                                        highest revenue-generating product categories.
-                                    </li>
-
-                                    <li>
-                                        Longer delivery times showed a
-                                        <strong>negative relationship with customer review scores</strong>,
-                                        making delivery performance an important area for operational review.
-                                    </li>
-
-                                    <li>
-                                        The analysis showed that the majority of customers were
-                                        <strong>one-time buyers</strong>, highlighting limited repeat
-                                        purchasing within the dataset.
-                                    </li>
-
-                                    <li>
-                                        Several states showed
-                                        <strong>higher freight-to-product-price ratios</strong>,
-                                        highlighting regional differences in logistics costs.
-                                    </li>
-
-                                </ul>
-
-                                <p>
-                                    The ETL workflow included multi-table joins, missing-value handling,
-                                    category standardization, date processing, and feature engineering for
-                                    delivery time, freight ratios, and repeat-customer behavior. The cleaned
-                                    dataset was then used to translate operational and customer patterns
-                                    into business-focused findings around logistics, customer experience,
-                                    revenue performance, and retention.
-                                </p>
-
-                                <ul class="actions">
-
-                                    <li>
-
-                                        <a
-                                            href="https://github.com/AnnBMariyam/Ecommerce-Customer-Analytics-ETL"
-                                            class="button"
-                                        >
-                                            View Project
-                                        </a>
-
-                                    </li>
-
-                                </ul>
-
-                            </article>
-
-
-                            <!-- Power BI -->
-                            <article>
-
-                                <a href="#" class="image">
-
-                                    <img
-                                        src="images/hospital dashboard.png"
-                                        alt="Power BI Dashboards"
-                                        style="height:270px; object-fit:cover;"
-                                    />
-
-                                </a>
-
-                                <h3>
-                                    Power BI Dashboard Projects
-                                </h3>
-
-                                <p>
-                                    To support better visibility into hospital operations,
-                                    this project involved building an interactive Power BI
-                                    dashboard focused on patient volume, appointment efficiency,
-                                    revenue patterns, and operational performance. The dashboard
-                                    was designed to help hospital administrators monitor key
-                                    healthcare metrics, identify high-load departments, understand
-                                    financial trends, and evaluate appointment outcomes.
-
-                                    Using hospital-related datasets including patients, doctors,
-                                    departments, appointments, billing, and medical records,
-                                    the project transformed operational data into a clear business
-                                    intelligence solution. Key metrics included total patients,
-                                    total appointments, total revenue, cancellation rate, and
-                                    average treatment cost. Visual insights were created to show
-                                    appointment distribution by department, revenue by payment
-                                    method, appointment status, and disease distribution.
-
-                                    Developed using Power BI Desktop and DAX functions such as
-                                    CALCULATE, SUM, SUMX, DIVIDE, and DISTINCTCOUNT, this dashboard
-                                    demonstrates how healthcare data can be converted into actionable
-                                    insights for administrative planning, workload monitoring,
-                                    and performance improvement.
-                                </p>
-
-                                <ul class="actions">
-
-                                    <li>
-
-                                        <a
-                                            href="https://github.com/AnnBMariyam/Power-BI-dashboard-projects"
-                                            class="button"
-                                        >
-                                            View Project
-                                        </a>
-
-                                    </li>
-
-                                </ul>
-
-                            </article>
-
-
-                            <!-- COVID Forecasting -->
-                            <article>
-
-                                <a href="#" class="image">
-
-                                    <img
-                                        src="images/pic03.png"
-                                        alt="COVID-19 Forecasting"
-                                        style="height:600px; object-fit:cover;"
-                                    />
-
-                                </a>
-
-                                <h3>
-                                    COVID-19 Regional Forecasting (Italy)
-                                </h3>
-
-                                <p>
-                                    Public health organizations depend on accurate forecasting
-                                    models to anticipate healthcare demand and allocate resources
-                                    effectively. This project developed a comprehensive time-series
-                                    forecasting pipeline using regional COVID-19 epidemiological
-                                    data from Lombardia, Italy, to predict future case trends
-                                    and support data-driven planning.
-
-                                    The solution evaluated and compared multiple forecasting
-                                    approaches, including Naive Baseline, SARIMA, and Random Forest
-                                    models using Python, Pandas, Scikit-learn, and statistical
-                                    forecasting techniques. Through rigorous model evaluation and
-                                    validation, SARIMA achieved the strongest forecasting performance
-                                    with a Mean Absolute Error (MAE) of 180 compared to 206 for
-                                    the baseline model. Beyond model development, the project
-                                    identified and corrected a critical evaluation flaw through
-                                    statistical validation and data integrity checks, ensuring
-                                    research-grade analytical accuracy. The final outcome provided
-                                    actionable forecasting insights that could support regional
-                                    health authorities in resource planning and operational preparedness.
-                                </p>
-
-                                <ul class="actions">
-
-                                    <li>
-
-                                        <a
-                                            href="https://github.com/AnnBMariyam/COVID-19-Regional-Forecasting-Italy"
-                                            class="button"
-                                        >
-                                            View Project
-                                        </a>
-
-                                    </li>
-
-                                </ul>
-
-                            </article>
-
-
-                            <!-- Diabetes -->
-                            <article>
-
-                                <a href="#" class="image">
-
-                                    <img
-                                        src="images/pic04.png"
-                                        alt="Diabetes Prediction"
-                                        style="height:270px; object-fit:cover;"
-                                    />
-
-                                </a>
-
-                                <h3>
-                                    Diabetes Risk Prediction Using Machine Learning
-                                </h3>
-
-                                <p>
-                                    Focusing on the need for early diabetes risk detection,
-                                    this project applied supervised machine learning to classify
-                                    diabetes risk using routine patient health indicators such as
-                                    age, gender, BMI, glucose level, blood pressure, insulin,
-                                    HbA1c level, and smoking history. The goal was to compare
-                                    multiple models and identify which approach could most
-                                    effectively support early risk screening using structured
-                                    healthcare data.
-
-                                    Developed in Python with Pandas, NumPy, Matplotlib, Seaborn,
-                                    Scikit-Learn, TensorFlow, and Keras, the workflow included
-                                    data loading, exploratory data analysis, preprocessing,
-                                    categorical encoding, feature scaling, feature engineering,
-                                    model training, and performance evaluation. Four models
-                                    were implemented and compared: Logistic Regression,
-                                    Support Vector Machine, Random Forest Classifier, and a
-                                    Neural Network. The Neural Network achieved the strongest
-                                    overall performance with 97.14% accuracy and 0.9764 AUC-ROC,
-                                    while Random Forest performed closely and offered better
-                                    interpretability. The project also highlighted the importance
-                                    of evaluating recall in healthcare contexts, since missing
-                                    actual diabetic patients can be more costly than false positives.
-                                    This solution demonstrates how machine learning can support
-                                    clinical decision-making by helping flag high-risk patients
-                                    for further testing.
-                                </p>
-
-                                <ul class="actions">
-
-                                    <li>
-
-                                        <a
-                                            href="https://github.com/AnnBMariyam/Diabetes-Risk-Prediction-ML"
-                                            class="button"
-                                        >
-                                            View Project
-                                        </a>
-
-                                    </li>
-
-                                </ul>
-
-                            </article>
-
-
-                            <!-- Energy Forecasting -->
-                            <article>
-
-                                <a href="#" class="image">
-
-                                    <img
-                                        src="images/pic05.png"
-                                        alt="Time Series Forecasting"
-                                        style="height:270px; object-fit:cover;"
-                                    />
-
-                                </a>
-
-                                <h3>
-                                    Time Series Forecasting of Energy Metrics
-                                </h3>
-
-                                <p>
-                                    Addressing the challenges of forecasting energy system behavior,
-                                    this project focused on predicting electricity transformer oil
-                                    temperature using the ETTh1 benchmark dataset, a real-world
-                                    multivariate time-series dataset with hourly readings, trend,
-                                    seasonality, and non-stationarity. The objective was to evaluate
-                                    how effectively deep learning models could capture temporal
-                                    patterns and whether complex architectures always outperform
-                                    simpler forecasting approaches.
-
-                                    Implemented in Python using Pandas, NumPy, Matplotlib, Seaborn,
-                                    TensorFlow, and Keras, the project involved exploratory data
-                                    analysis, stationarity testing, time-based feature engineering,
-                                    cyclical encoding, differencing, and time-aware train-validation-test
-                                    splitting to prevent data leakage. Six forecasting models were
-                                    developed and compared, including Naive Baseline, LSTM, GRU,
-                                    Conv1D, Dilated Conv1D, and Seq2Seq Encoder-Decoder models.
-
-                                    The analysis revealed that proper data preparation, especially
-                                    handling non-stationarity through differencing, had a stronger
-                                    impact on forecasting performance than model complexity alone.
-
-                                    This project demonstrates a disciplined end-to-end forecasting
-                                    workflow applicable to energy analytics, predictive maintenance,
-                                    operational monitoring, and other multivariate time-series domains.
-                                </p>
-
-                                <ul class="actions">
-
-                                    <li>
-
-                                        <a
-                                            href="https://github.com/AnnBMariyam/Time-Series-Forecasting-of-Energy-Metrics"
-                                            class="button"
-                                        >
-                                            View Project
-                                        </a>
-
-                                    </li>
-
-                                </ul>
-
-                            </article>
+								<p style="
+									color:#f56a6a;
+									font-weight:700;
+									text-transform:uppercase;
+									letter-spacing:0.08em;
+									margin-bottom:0.5em;
+								">
+									Business Intelligence
+								</p>
+
+								<h3>
+									Sales Revenue & Profitability Analysis
+								</h3>
+
+								<p>
+									Analyzed 9,994 retail transactions to identify revenue drivers,
+									profitability gaps, product-level losses, and discount patterns
+									using Python, SQL, Tableau, and Power BI.
+								</p>
+
+								<div style="
+									display:grid;
+									grid-template-columns:repeat(2, 1fr);
+									gap:0.75em;
+									margin:1.5em 0;
+								">
+
+									<div style="padding:1em; background:#f5f6f7; border-radius:8px;">
+										<strong style="font-size:1.35em;">9,994</strong><br>
+										<span style="font-size:0.85em;">transactions analyzed</span>
+									</div>
+
+									<div style="padding:1em; background:#f5f6f7; border-radius:8px;">
+										<strong style="font-size:1.35em;">~$2.3M</strong><br>
+										<span style="font-size:0.85em;">sales analyzed</span>
+									</div>
+
+								</div>
+
+								<p>
+									<strong>Key finding:</strong>
+									Technology generated approximately $145K in profit,
+									while Tables produced about $17.7K in losses.
+									Transactions discounted above 30% also showed weaker
+									profitability patterns.
+								</p>
+
+								<p style="font-size:0.9em;">
+									<strong>Tools:</strong>
+									Python · SQL · Power BI · Tableau · Pandas
+								</p>
+
+								<ul class="actions">
+									<li>
+										<a
+											href="https://github.com/AnnBMariyam/Sales-Revenue-Analytics"
+											class="button"
+										>
+											Explore Project
+										</a>
+									</li>
+								</ul>
+
+							</article>
+
+
+							<!-- =========================================================
+								2. PRODUCTION ETL
+							========================================================= -->
+							<article>
+
+								<a href="images/etl-pipeline-architecture.png" class="image">
+									<img
+										src="images/etl-pipeline-architecture.png"
+										alt="API to PostgreSQL ETL Pipeline Architecture"
+										style="height:260px; object-fit:contain; background:#0d1117;"
+									/>
+								</a>
+
+								<p style="
+									color:#f56a6a;
+									font-weight:700;
+									text-transform:uppercase;
+									letter-spacing:0.08em;
+									margin-bottom:0.5em;
+								">
+									Data Engineering
+								</p>
+
+								<h3>
+									Production-Style API to PostgreSQL ETL Pipeline
+								</h3>
+
+								<p>
+									Built a modular Python ETL pipeline that extracts paginated product
+									data from a REST API, validates and transforms nested JSON, and loads
+									clean records into PostgreSQL using idempotent upserts.
+								</p>
+
+								<div style="
+									display:grid;
+									grid-template-columns:repeat(2, 1fr);
+									gap:0.75em;
+									margin:1.5em 0;
+								">
+
+									<div style="padding:1em; background:#f5f6f7; border-radius:8px;">
+										<strong style="font-size:1.35em;">15</strong><br>
+										<span style="font-size:0.85em;">automated pytest cases</span>
+									</div>
+
+									<div style="padding:1em; background:#f5f6f7; border-radius:8px;">
+										<strong style="font-size:1.35em;">CI + Docker</strong><br>
+										<span style="font-size:0.85em;">repeatable workflow</span>
+									</div>
+
+								</div>
+
+								<p>
+									<strong>Engineering highlight:</strong>
+									Timestamped raw JSON is preserved for traceability, while PostgreSQL
+									<code>ON CONFLICT</code> upserts allow repeat runs without creating
+									duplicate source product IDs.
+								</p>
+
+								<p style="font-size:0.9em;">
+									<strong>Tools:</strong>
+									Python · Pandas · PostgreSQL · REST API · Docker · pytest · GitHub Actions
+								</p>
+
+								<ul class="actions">
+									<li>
+										<a
+											href="https://github.com/AnnBMariyam/ecommerce-pipeline-foundations"
+											class="button"
+										>
+											Explore Project
+										</a>
+									</li>
+								</ul>
+
+							</article>
+
+
+							<!-- =========================================================
+								3. E-COMMERCE CUSTOMER ANALYTICS
+							========================================================= -->
+							<article>
+
+								<a href="images/ecommerce-delivery-review.png" class="image">
+									<img
+										src="images/ecommerce-delivery-review.png"
+										alt="Delivery Time versus Customer Review Score"
+										style="height:260px; object-fit:contain; background:#f5f6f7;"
+									/>
+								</a>
+
+								<p style="
+									color:#f56a6a;
+									font-weight:700;
+									text-transform:uppercase;
+									letter-spacing:0.08em;
+									margin-bottom:0.5em;
+								">
+									Customer Analytics & ETL
+								</p>
+
+								<h3>
+									E-Commerce Customer Analytics
+								</h3>
+
+								<p>
+									Combined six relational Olist datasets into an analysis-ready
+									workflow to investigate revenue, customer behavior, delivery
+									performance, reviews, and regional freight costs.
+								</p>
+
+								<div style="
+									display:grid;
+									grid-template-columns:repeat(2, 1fr);
+									gap:0.75em;
+									margin:1.5em 0;
+								">
+
+									<div style="padding:1em; background:#f5f6f7; border-radius:8px;">
+										<strong style="font-size:1.35em;">98,666</strong><br>
+										<span style="font-size:0.85em;">orders analyzed</span>
+									</div>
+
+									<div style="padding:1em; background:#f5f6f7; border-radius:8px;">
+										<strong style="font-size:1.35em;">~$15.84M</strong><br>
+										<span style="font-size:0.85em;">revenue analyzed</span>
+									</div>
+
+								</div>
+
+								<p>
+									<strong>Key finding:</strong>
+									Longer delivery times were associated with lower customer review
+									scores, while repeat purchasing remained limited and some states
+									showed substantially higher freight-cost ratios.
+								</p>
+
+								<p style="font-size:0.9em;">
+									<strong>Tools:</strong>
+									Python · Pandas · NumPy · ETL · EDA
+								</p>
+
+								<ul class="actions">
+									<li>
+										<a
+											href="https://github.com/AnnBMariyam/Ecommerce-Customer-Analytics-ETL"
+											class="button"
+										>
+											Explore Project
+										</a>
+									</li>
+								</ul>
+
+							</article>
+
+
+							<!-- =========================================================
+								4. POWER BI / HOSPITAL ANALYTICS
+							========================================================= -->
+							<article>
+
+								<a href="images/hospital dashboard.png" class="image">
+									<img
+										src="images/hospital dashboard.png"
+										alt="Hospital Analytics Power BI Dashboard"
+										style="height:260px; object-fit:contain; background:#f5f6f7;"
+									/>
+								</a>
+
+								<p style="
+									color:#f56a6a;
+									font-weight:700;
+									text-transform:uppercase;
+									letter-spacing:0.08em;
+									margin-bottom:0.5em;
+								">
+									Business Intelligence
+								</p>
+
+								<h3>
+									Hospital Operations Analytics Dashboard
+								</h3>
+
+								<p>
+									Built an interactive Power BI dashboard combining patient,
+									appointment, department, billing, and medical-record data to
+									monitor hospital activity and operational KPIs.
+								</p>
+
+								<div style="
+									display:grid;
+									grid-template-columns:repeat(2, 1fr);
+									gap:0.75em;
+									margin:1.5em 0;
+								">
+
+									<div style="padding:1em; background:#f5f6f7; border-radius:8px;">
+										<strong style="font-size:1.35em;">32.67%</strong><br>
+										<span style="font-size:0.85em;">cancellation rate</span>
+									</div>
+
+									<div style="padding:1em; background:#f5f6f7; border-radius:8px;">
+										<strong style="font-size:1.35em;">$10.93K</strong><br>
+										<span style="font-size:0.85em;">highest avg. treatment cost</span>
+									</div>
+
+								</div>
+
+								<p>
+									<strong>Key finding:</strong>
+									Radiology recorded the highest appointment volume, while Oncology
+									had the highest average treatment cost among the departments shown.
+								</p>
+
+								<p style="font-size:0.9em;">
+									<strong>Tools:</strong>
+									Power BI · DAX · Data Modeling · KPI Reporting
+								</p>
+
+								<ul class="actions">
+									<li>
+										<a
+											href="https://github.com/AnnBMariyam/Power-BI-dashboard-projects"
+											class="button"
+										>
+											Explore Project
+										</a>
+									</li>
+								</ul>
+
+							</article>
+
+
+							<!-- =========================================================
+								5. COVID FORECASTING
+							========================================================= -->
+							<article>
+
+								<a href="images/covid-model-comparison.png" class="image">
+									<img
+										src="images/covid-model-comparison.png"
+										alt="COVID-19 Forecast Model Comparison"
+										style="height:260px; object-fit:contain; background:#f5f6f7;"
+									/>
+								</a>
+
+								<p style="
+									color:#f56a6a;
+									font-weight:700;
+									text-transform:uppercase;
+									letter-spacing:0.08em;
+									margin-bottom:0.5em;
+								">
+									Time-Series Forecasting
+								</p>
+
+								<h3>
+									COVID-19 Regional Forecasting — Italy
+								</h3>
+
+								<p>
+									Compared statistical and machine-learning approaches for forecasting
+									regional COVID-19 case trends in Lombardia using time-aware
+									validation.
+								</p>
+
+								<div style="
+									display:grid;
+									grid-template-columns:repeat(2, 1fr);
+									gap:0.75em;
+									margin:1.5em 0;
+								">
+
+									<div style="padding:1em; background:#f5f6f7; border-radius:8px;">
+										<strong style="font-size:1.35em;">180.42</strong><br>
+										<span style="font-size:0.85em;">SARIMA MAE</span>
+									</div>
+
+									<div style="padding:1em; background:#f5f6f7; border-radius:8px;">
+										<strong style="font-size:1.35em;">205.84</strong><br>
+										<span style="font-size:0.85em;">naive baseline MAE</span>
+									</div>
+
+								</div>
+
+								<p>
+									<strong>Key finding:</strong>
+									After correcting the validation approach, SARIMA delivered the
+									strongest out-of-sample performance, outperforming both the
+									Naive baseline and Random Forest benchmark.
+								</p>
+
+								<p style="font-size:0.9em;">
+									<strong>Tools:</strong>
+									Python · Pandas · SARIMA · Scikit-Learn · Time Series
+								</p>
+
+								<ul class="actions">
+									<li>
+										<a
+											href="https://github.com/AnnBMariyam/COVID-19-Regional-Forecasting-Italy"
+											class="button"
+										>
+											Explore Project
+										</a>
+									</li>
+								</ul>
+
+							</article>
+
+
+							<!-- =========================================================
+								6. DIABETES PREDICTION
+							========================================================= -->
+							<article>
+
+								<a href="images/diabetes-model-comparison.png" class="image">
+									<img
+										src="images/diabetes-model-comparison.png"
+										alt="Diabetes Machine Learning Model Comparison"
+										style="height:260px; object-fit:contain; background:#f5f6f7;"
+									/>
+								</a>
+
+								<p style="
+									color:#f56a6a;
+									font-weight:700;
+									text-transform:uppercase;
+									letter-spacing:0.08em;
+									margin-bottom:0.5em;
+								">
+									Machine Learning
+								</p>
+
+								<h3>
+									Diabetes Risk Prediction
+								</h3>
+
+								<p>
+									Built and compared four supervised-learning models on a public
+									diabetes prediction dataset using a complete preprocessing,
+									training, and evaluation workflow.
+								</p>
+
+								<div style="
+									display:grid;
+									grid-template-columns:repeat(2, 1fr);
+									gap:0.75em;
+									margin:1.5em 0;
+								">
+
+									<div style="padding:1em; background:#f5f6f7; border-radius:8px;">
+										<strong style="font-size:1.35em;">97.14%</strong><br>
+										<span style="font-size:0.85em;">neural network accuracy</span>
+									</div>
+
+									<div style="padding:1em; background:#f5f6f7; border-radius:8px;">
+										<strong style="font-size:1.35em;">0.9764</strong><br>
+										<span style="font-size:0.85em;">AUC-ROC</span>
+									</div>
+
+								</div>
+
+								<p>
+									<strong>Key finding:</strong>
+									The Neural Network produced the strongest overall results, although
+									recall remained lower at 0.695, highlighting why accuracy alone was
+									not sufficient for evaluating the classifier.
+								</p>
+
+								<p style="font-size:0.9em;">
+									<strong>Tools:</strong>
+									Python · Scikit-Learn · TensorFlow · Keras · Pandas
+								</p>
+
+								<ul class="actions">
+									<li>
+										<a
+											href="https://github.com/AnnBMariyam/Diabetes-Risk-Prediction-ML"
+											class="button"
+										>
+											Explore Project
+										</a>
+									</li>
+								</ul>
+
+							</article>
+
+
+							<!-- =========================================================
+								7. ENERGY FORECASTING
+							========================================================= -->
+							<article>
+
+								<a href="images/energy-model-comparison.png" class="image">
+									<img
+										src="images/energy-model-comparison.png"
+										alt="Energy Forecasting Model Comparison"
+										style="height:260px; object-fit:contain; background:#f5f6f7;"
+									/>
+								</a>
+
+								<p style="
+									color:#f56a6a;
+									font-weight:700;
+									text-transform:uppercase;
+									letter-spacing:0.08em;
+									margin-bottom:0.5em;
+								">
+									Deep Learning & Forecasting
+								</p>
+
+								<h3>
+									Time-Series Forecasting of Energy Metrics
+								</h3>
+
+								<p>
+									Benchmarked deep-learning approaches for forecasting electricity
+									transformer oil temperature using more than 17,000 hourly ETTh1
+									observations.
+								</p>
+
+								<div style="
+									display:grid;
+									grid-template-columns:repeat(2, 1fr);
+									gap:0.75em;
+									margin:1.5em 0;
+								">
+
+									<div style="padding:1em; background:#f5f6f7; border-radius:8px;">
+										<strong style="font-size:1.35em;">0.47</strong><br>
+										<span style="font-size:0.85em;">Stacked GRU test MAE</span>
+									</div>
+
+									<div style="padding:1em; background:#f5f6f7; border-radius:8px;">
+										<strong style="font-size:1.35em;">0.65</strong><br>
+										<span style="font-size:0.85em;">baseline test MAE</span>
+									</div>
+
+								</div>
+
+								<p>
+									<strong>Key finding:</strong>
+									Addressing non-stationarity through differencing improved forecasting
+									performance, with the final Stacked GRU outperforming the baseline.
+								</p>
+
+								<p style="font-size:0.9em;">
+									<strong>Tools:</strong>
+									Python · TensorFlow · Keras · GRU · Pandas · Time Series
+								</p>
+
+								<ul class="actions">
+									<li>
+										<a
+											href="https://github.com/AnnBMariyam/Time-Series-Forecasting-of-Energy-Metrics"
+											class="button"
+										>
+											Explore Project
+										</a>
+									</li>
+								</ul>
+
+							</article>
 
                         </div>
 
